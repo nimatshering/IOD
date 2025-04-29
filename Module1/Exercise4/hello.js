@@ -1,5 +1,5 @@
 function hello(name) {
-  console.log("Welcome - " + name);
+  console.log("Hello - " + name);
 }
 
 hello("Joe");
