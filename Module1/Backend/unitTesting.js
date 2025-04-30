@@ -12,7 +12,11 @@ function greet(name) {
 // greet("Harry");
 
 function sum(a, b) {
-  console.log(a + b);
+  // console.log(a + b);
+  let sum = a +b
+  if(sum !=6){
+    
+  }
 }
 
 sum(5, 5);

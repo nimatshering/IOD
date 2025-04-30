@@ -1,20 +1,20 @@
 function plus(a, b) {
-  console.log(a + b);
+  return a + b;
 }
 
 function minus(a, b) {
-  console.log(a - b);
+  return a - b;
 }
 
 function multiply(a, b) {
-  console.log(a * b);
+  return a * b;
 }
 
 function divide(a, b) {
-  console.log(a * b);
+  return a / b;
 }
 
-plus(4, 5);
-minus(4, 5);
-divide(4, 5);
-multiply(4, 5);
+console.log(plus(6, 4));
+console.log(minus(5, 4));
+console.log(multiply(5, 5));
+console.log(divide(5, 4));

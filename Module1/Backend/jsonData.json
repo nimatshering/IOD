@@ -1,0 +1,7 @@
+
+
+const user = {
+  "name": "John",
+  "country": "Australia",
+  "lang": "English"
+}
