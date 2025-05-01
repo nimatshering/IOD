@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Exercise</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Exercise 8</h1>
+      <h2>Dice Rolling</h2>
+    </header>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+      <article class="center">
+        <h2 class="py-20">Roll a Dice! Online Random Dice game</h2>
+        <label for="selected_face">Please select the dice face and roll</label>
+        <select id="selected_face">
+          <option value="6">D6</option>
+          <option value="10">D10</option>
+        </select>
+
+        <div class="py-20">
+          <button class="button" onclick="roll_dice()">Roll Dice</button>
+        </div>
+      </article>
+
+      <article>
+        <div class="container">
+          <p class="display" id="output"></p>
+          <img src="../dice-ui/default.gif" id="image"  width="200" height="200" alt="roll dice"/>
+         </div>
+      </article>
+    </section>
+    <footer>
+      <p>@copyright 2050 by nobody. all rights reversed</p>
+    </footer>
+    <script src="../dice-src/dice.js"></script>
+  </body>
+</html>
