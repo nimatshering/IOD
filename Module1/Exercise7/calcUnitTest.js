@@ -127,7 +127,8 @@ if (div1 !== 5) {
 const div2 = divide(-12, 3.5);
 if (div2 !== -3.4285714285714284) {
   console.error(
-    "Division - Test case 1 failed: Product should be 7, but got " + div2
+    "Division - Test case 1 failed: Product should be -3.4285714285714284, but got " +
+      div2
   );
 } else {
   console.log("Division - Test case 2 passed , Excellent!!!");
