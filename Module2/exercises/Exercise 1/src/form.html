@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <header>
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="./index.html">Home</a>
+        <a href="./form.html">Form</a>
+      </nav>
+    </header>
+
+    <main>
+      <form method="POST" action="http://localhost:3000/profile">
+        <div>
+          <label for="firstname"></label>
+          <input type="text" name="firstname" placeholder="First Name" />
+        </div>
+
+        <div>
+          <label for="lastname"></label>
+          <input type="text" name="lastname" placeholder="Last Name" />
+        </div>
+
+        <p>Please select your favorite coding language:</p>
+
+        <div>
+          <input type="radio" id="html" name="fav_lang" value="Java" />
+          <label for="java">Java</label>
+        </div>
+
+        <div>
+          <input type="radio" id="css" name="fav_lang" value="PHP" />
+          <label for="css">PHP</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="javascript"
+            name="fav_lang"
+            value="JavaScript"
+          />
+          <label for="javascript">JavaScript</label>
+        </div>
+
+        <p>Select type of vehicles you own:</p>
+
+        <div>
+          <input
+            type="checkbox"
+            id="vech_type2"
+            name="vech_type2"
+            value="sedan"
+          />
+          <label for="vech_type1"> My vehicle type is sedan</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="vech_type2"
+            name="vech_type2"
+            value="SUV"
+          />
+          <label for="vech_type2"> My vehicle type is SUV</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="vech_type3"
+            name="vech_type3"
+            value="Truck"
+          />
+          <label for="vech_type3"> My vehicle type is Truck</label>
+        </div>
+
+        <div>
+          <label for="cars">Choose a car brand:</label>
+          <select name="cars" id="cars">
+            <option value="volvo">Toyota</option>
+            <option value="saab">Mitsubishi</option>
+            <option value="mercedes">Jeep</option>
+            <option value="audi">Jaguar</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit form</button>
+      </form>
+    </main>
+
+    <footer>Copyright &copy; 2024</footer>
+  </body>
+</html>

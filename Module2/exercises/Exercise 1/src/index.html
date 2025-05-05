@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="NT" />
+    <title>Exercise 1</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="./index.html">Home</a>
+        <a href="./form.html">Form</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>My HTML learning journey</h1>
+      <article>
+        <h2>Learning elements - div, span, p, pre, ul, li, ol, article</h2>
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <span>HTML-1</span> <span>CSS-1</span> <span>JavaScript-1</span>
+
+        <p>p represents paragraph without preserving spacing</p>
+        <pre>
+            Text in a pre element
+            is displayed in a fixed-width
+            font, and it preserves
+            both      spaces and
+            line breaks
+      </pre
+        >
+
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <ol>
+              <li>Item 1</li>
+              <li>Item 1</li>
+            </ol>
+          </li>
+        </ul>
+
+        <ol>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <ul>
+              <li>Item 1</li>
+              <li>Item 1</li>
+            </ul>
+          </li>
+        </ol>
+      </article>
+
+      <article>
+        <h2>HTML Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">First header</th>
+              <th>Second header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>First cell - first row</td>
+              <td>Second cell - first row</td>
+              <td>Third cell - first row</td>
+            </tr>
+
+            <tr>
+              <td>First cell - first row</td>
+              <td rowspan="2">Second cell - first row</td>
+              <td>Third cell - first row</td>
+            </tr>
+
+            <tr>
+              <td>First cell - first row</td>
+              <td>Second cell - first row</td>
+              <td>Third cell - first row</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h2>Image</h2>
+        <img
+          src="https://placehold.co/400"
+          height="400"
+          width="400"
+          alt="Alt Image"
+        />
+
+        <img
+          src="./assets/html_lab_image.jpg"
+          height="400"
+          width="400"
+          alt="Alt Image"
+        />
+
+        <video controls autoplay>
+          <source src="/assets/flower.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
+        <audio controls autoplay src="/assets/t-rex-roar.mp3">
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+      </article>
+    </main>
+    <footer>Copyright &copy; 2024</footer>
+  </body>
+</html>
