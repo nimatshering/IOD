@@ -1,0 +1,225 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.style-me1 {
+  color: red;
+}
+
+#style-me2 {
+  color: blue;
+}
+.style-me1#style-me2 {
+  color: purple;
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+.my-descendants-are-styled p {
+  color: red;
+}
+
+.my-children-are-styled > p {
+  color: lightgreen;
+}
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+.box {
+  background-color: green;
+  margin: 4px 5px 5px 4px; /* 4  values*/
+  margin: 4px 5px; /* 2 values*/
+  margin: 5px; /*higher priority*/
+  height: 20px;
+  height: 100%; /*higher priority*/
+  width: 90vw !important; /*higher priority*/
+  width: 100%;
+}
+
+/* 3.1 & 3.2 */
+.box {
+  background-color: green;
+  border: 10px soild blue;
+  border: 10px dotted red;
+  border: 10px dashed yellow;
+}
+
+/* 4.1 - box-sizing - border-box*/
+.box {
+  background-color: green;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  height: 100px;
+  width: 500px;
+}
+/* box-sizing - content-box */
+.box {
+  background-color: green;
+  box-sizing: content-box;
+  padding: 10px;
+  margin: 10px;
+  height: 100px;
+  width: 500px;
+}
+
+/* 5.1 - overflow */
+.box {
+  background-color: green;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  height: 100px;
+  width: 500px;
+  overflow: scroll;
+}
+
+/* 6.1 - outline  */
+.box {
+  border: 10px solid red;
+  outline: #4caf50 solid 10px;
+  margin: 10px;
+  padding: 30px;
+}
+
+/* 7.1 - border-radius - Oval  */
+/* rounded corner  */
+.box#rounded {
+  border: 10px solid red;
+  border-radius: 10px;
+  margin: 10px;
+  width: 200px;
+  padding: 30px;
+  text-align: center;
+}
+
+.box#oval {
+  border: 10px solid red;
+  outline: #4caf50 solid 10px;
+  border-radius: 50%;
+  margin: 10px;
+  width: 400px !important;
+  height: 300px !important;
+  padding: 30px;
+  text-align: center;
+}
+
+/* 7.1 - border-radius - circle */
+.box#circle {
+  border: 10px solid red;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 30px;
+  width: 200px !important;
+  text-align: center;
+}
+
+/* 8 - image background */
+.box#rounded {
+  background: no-repeat url("../assets/images/img1.png");
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  padding: 30px;
+  height: 400px !important;
+  width: 1000px !important;
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  right: 100px;
+  /* bottom: 0; */
+  background-color: #ce2675;
+}
+
+.position-relative {
+  position: relative;
+  background-color: yellow;
+}
+
+.position-sticky {
+  position: sticky;
+  background-color: rgb(30, 92, 206);
+  top: 0;
+  color: aliceblue;
+  padding: 10px;
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+.text-style {
+  color: brown;
+  /* font-size: 26px; */
+  /* font-size: 1.2em; */
+  /* font-size: 1.5rem; */
+  /* font-size: 15pt; */
+  /* font-size: 1.5vw; */
+
+  /* line-height: 26px; */
+  /* line-height: 2em; */
+  /* line-height: 1.5rem; */
+  /* line-height: 15pt; */
+  line-height: 1.5vw;
+
+  /* font-weight: bold; */
+  font-weight: 500;
+  /* font-weight: 600; */
+  /* font-weight: 700; */
+  /* font-weight: 800; */
+  /* font-weight: 900; */
+
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+a,
+a:link {
+  color: blue;
+  font-size: 18px;
+  font-weight: medium;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #6a0707;
+  text-decoration: line-through;
+}
+
+a:hover {
+  color: white;
+  background-color: blue;
+  text-decoration: line-through;
+}
+
+a:active {
+  background-color: green;
+  text-decoration: none;
+}
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
+.calc-style {
+  background-color: #ce2675;
+  width: calc(100vw - 100px);
+}
+
+.fixed-width-col {
+  width: 350px;
+  display: inline-block;
+}
+.fluid-col {
+  display: inline-block;
+  width: calc(100vw - 350px);
+}
