@@ -51,15 +51,15 @@ const sortedAnimals = [...animals].sort();
 console.log(sortedAnimals);
 
 //d) Function to replace the value in the middle of the animals array with newValue
-function eplaceMiddleAnimal(newValue) {
+function replaceMiddleAnimal(newValue) {
   const middle = Math.round(animals.length / 2);
   animals[middle] = newValue;
 }
 
-eplaceMiddleAnimal("Leopard");
+replaceMiddleAnimal("Leopard");
 console.log(animals);
 
-//e.
+//e. findMatchingAnimals
 function findMatchingAnimals(beginsWith) {
   const uppercase = beginsWith.toUpperCase();
   return animals.filter((animal) => animal.toUpperCase().startsWith(uppercase));
@@ -239,7 +239,7 @@ const books = [
     year: 1951,
   },
 ];
-// a) - Write a function getBookTitle(bookId)
+// a) -Function to getBookTitle(bookId)
 function getBookTitle(bookId) {
   return books.find((book) => book.id === bookId);
 }
