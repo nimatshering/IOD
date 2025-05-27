@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #e3f2fd;
+      }
+
+      #card-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+      }
+
+      .card {
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        flex: 0 1 calc(30% - 10px);
+      }
+
+      .card-title {
+        font-weight: 600;
+        font-size: 2.5em;
+        padding: 0 0 10px 0;
+      }
+      .card-description {
+        font-weight: 400;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <template id="card-template">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"></div>
+          <img src="" id="image" width="200" height="200" alt="card" />
+          <div class="card-description"></div>
+        </div>
+      </div>
+    </template>
+    <div id="card-list"></div>
+    <script>
+      function addCard(artist, artwork) {
+        // clone the template
+        const template = document
+          .getElementById("card-template")
+          .content.cloneNode(true);
+
+        template.querySelector(".card-title").innerText = artist.name;
+        template.querySelector(".card-description").innerText = artwork.title;
+        template.querySelector("#image").src = artwork.url;
+
+        // include the populated template into the page
+        document.querySelector("#card-list").appendChild(template);
+      }
+
+      //array of artists, all with multiple portfolio items
+      const artists = [
+        {
+          name: "Van Gogh",
+          portfolio: [
+            {
+              title: "portrait",
+              url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image",
+            },
+            {
+              title: "sky",
+              url: "https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg",
+            },
+          ],
+        },
+        {
+          name: "Claude Monet",
+          portfolio: [
+            {
+              title: "water lilies",
+              url: "https://upload.wikimedia.org/wikipedia/commons/1/14/Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg",
+            },
+            {
+              title: "haystacks",
+              url: "https://images.pexels.com/photos/32203543/pexels-photo-32203543/free-photo-of-abstract-fluid-art-in-purple-and-yellow-tones.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            },
+          ],
+        },
+        {
+          name: "Pablo Picasso",
+          portfolio: [
+            {
+              title: "guernica",
+              url: "https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg",
+            },
+            {
+              title: "the weeping woman",
+              url: "https://images.pexels.com/photos/32203512/pexels-photo-32203512/free-photo-of-colorful-abstract-liquid-marble-art.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            },
+          ],
+        },
+      ];
+
+      artists.forEach((artist) => {
+        artist.portfolio.forEach((artwork) => {
+          addCard(artist, artwork);
+        });
+      });
+    </script>
+  </body>
+</html>

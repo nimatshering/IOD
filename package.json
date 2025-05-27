@@ -1,5 +1,24 @@
 {
   "dependencies": {
-    "json-server": "^1.0.0-beta.3"
-  }
+    "json-server": "^1.0.0-beta.3",
+    "node-fetch": "^3.3.2"
+  },
+  "name": "iod",
+  "version": "1.0.0",
+  "description": "IOD Class Exercises 2025 - Nima T",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimatshering/IOD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimatshering/IOD/issues"
+  },
+  "homepage": "https://github.com/nimatshering/IOD#readme",
+  "type": "module"
 }
