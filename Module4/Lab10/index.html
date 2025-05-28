@@ -84,17 +84,29 @@
     <div class="container my-4">
       <h2 class="mb-4">Filter Products by Category and Search</h2>
       <div class="row mb-4 g-2 align-items-center">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <select
             id="selectedCategory"
             class="form-select"
             aria-label="Select product category"
           >
-            <option value="all" selected>All Categories</option>
+            <option value="all" selected>Categories</option>
           </select>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-3">
+          <select
+            id="sortby"
+            class="form-select"
+            aria-label="Select product category"
+          >
+            <option value="all" selected>Sort by</option>
+            <option value="title">Product Name</option>
+            <option value="price">Price</option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
           <input
             type="text"
             id="searchInput"

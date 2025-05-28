@@ -72,9 +72,29 @@ function search() {
   addCard(productFound); // display card for the filtered products
 }
 
+// Filter function by category and search Key
+function sort() {
+  const sortby = document.getElementById("sortby").value; //gets the selected value from  the input
+
+  let sorted = [...products]; // Create a shallow copy to avoid mutating the original product
+
+  if (sortby === "title") {
+    sorted.sort((a, b) => {
+      const titleA = a.title.toLowerCase();
+      const titleB = b.title.toLowerCase();
+      return titleA < titleB ? -1 : titleA > titleB ? 1 : 0;
+    });
+  } else if (sortby === "price") {
+    sorted.sort((product1, product2) => product1.price - product2.price);
+  }
+
+  addCard(sorted); // display card for the filtered products
+}
+
 // Event listeners - tigger search function
 document.getElementById("selectedCategory").addEventListener("change", search); //tigger search function if selectedCategory in the dropdown changes
 document.getElementById("searchButton").addEventListener("click", search); //tigger search function if button clicked
+document.getElementById("sortby").addEventListener("change", sort); //tigger search function if button clicked
 
 //call the functions
 fetchCategories();
