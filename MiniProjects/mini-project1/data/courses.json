@@ -1,0 +1,94 @@
+{
+  "courses": [
+    {
+      "name": "Introduction to Artificial Intelligence (AI)",
+      "tutor": "Tutor 1",
+      "duration": "10 Weeks",
+      "skills": "Business Technologies, Automation Machine Learning, Artificial Intelligence and Machine Learning (AI/ML), Ethical Standards And Conduct Natural Language Processing, Applied Machine Learning",
+      "image": "./assets/img/courses/ai.jpg",
+      "category": "AI and Data Science"
+    },
+    {
+      "name": "Generative AI: Prompt Engineering Basics",
+      "tutor": "Tutor 2",
+      "duration": "12 Weeks",
+      "skills": "Business Technologies, Automation Machine Learning, Artificial Intelligence and Machine Learning (AI/ML), Ethical Standards And Conduct Natural Language Processing, Applied Machine Learning",
+      "image": "./assets/img/courses/genAI.jpg",
+      "category": "AI and Data Science"
+    },
+
+    {
+      "name": "Machine Learning",
+      "tutor": "Tutor 3",
+      "duration": "6 Weeks",
+      "skills": "Business Technologies, Automation Machine Learning, Artificial Intelligence and Machine Learning (AI/ML), Ethical Standards And Conduct Natural Language Processing, Applied Machine Learning",
+      "image": "./assets/img/courses/ml.jpg",
+      "category": "AI and Data Science"
+    },
+
+    {
+      "name": "Data Mining",
+      "tutor": "Tutor 3",
+      "duration": "4 Weeks",
+      "skills": "Business Technologies, Automation Machine Learning, Artificial Intelligence and Machine Learning (AI/ML), Ethical Standards And Conduct Natural Language Processing, Applied Machine Learning",
+      "image": "./assets/img/courses/data-mining.jpg",
+      "category": "AI and Data Science"
+    },
+    {
+      "name": "Data Science Fundamentals",
+      "tutor": "Tutor 1",
+      "duration": "4 Weeks",
+      "skills": "Data Analysis, Python Programming, Data Visualization, Statistics, Business Intelligence",
+      "image": "./assets/img/courses/data-science.jpg",
+      "category": "AI and Data Science"
+    },
+    {
+      "name": "Web Development Bootcamp",
+      "tutor": "Tutor 2",
+      "duration": "10 Weeks",
+      "skills": "HTML, CSS, JavaScript, Front-End Frameworks, Responsive Design, Web Hosting",
+      "image": "./assets/img/courses/web-dev.jpg",
+      "category": "Web Development"
+    },
+    {
+      "name": "Cloud Computing with AWS",
+      "tutor": "Tutor 4",
+      "duration": "10 Weeks",
+      "skills": "AWS Services, EC2, S3, IAM, Cloud Architecture, DevOps, Security",
+      "image": "./assets/img/courses/aws.jpg",
+      "category": "Web Development"
+    },
+    {
+      "name": "Cybersecurity Essentials",
+      "tutor": "Tutor 5",
+      "duration": "8 Weeks",
+      "skills": "Network Security, Cryptography, Ethical Hacking, Risk Management, Incident Response",
+      "image": "./assets/img/courses/cybersecurity.jpg",
+      "category": "Security & Networking"
+    },
+    {
+      "name": "UI/UX Design Masterclass",
+      "tutor": "Tutor 6",
+      "duration": "5 Weeks",
+      "skills": "User Research, Wireframing, Prototyping, Visual Design, Design Thinking, Figma",
+      "image": "./assets/img/courses/ui-ux.jpg",
+      "category": "UI/UX"
+    },
+    {
+      "name": "Artificial Intelligence in Business",
+      "tutor": "Tutor 7",
+      "duration": "10 Weeks",
+      "skills": "AI Strategy, Predictive Analytics, Business Automation, Machine Learning Models, Data Ethics",
+      "image": "./assets/img/courses/ai-business.jpg",
+      "category": "AI and Data Science"
+    },
+    {
+      "name": "Mobile App Development",
+      "tutor": "Tutor 8",
+      "duration": "10 Weeks",
+      "skills": "Kotlin, Swift, Flutter, React Native, Mobile UI/UX, App Deployment",
+      "image": "./assets/img/courses/mobile-dev.jpg",
+      "category": "Mobile App Development"
+    }
+  ]
+}

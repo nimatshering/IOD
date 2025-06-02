@@ -1,0 +1,10 @@
+{
+  "hero": [
+    {
+      "image": "./assets/img/hero-bg.jpg",
+      "title": "e-Learning",
+      "tagline": "Your Future, One Click Away",
+      "subtagline": "Smart Learning for a Smarter Tomorrow."
+    }
+  ]
+}

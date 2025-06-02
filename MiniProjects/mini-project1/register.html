@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Register</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Mentor
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="course-details-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Mentor</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li>
+              <a href="./index.html" class="active">Home<br /></a>
+            </li>
+            <li><a href="./courses.html">Courses</a></li>
+            <li><a href="./login.html">Login</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <a class="btn-getstarted" href="./register.html">Register</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title">
+        <nav class="breadcrumbs">
+          <div class="container fw-bold">Registration</div>
+        </nav>
+      </div>
+      <!-- End Page Title -->
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="py-4 col-12 col-sm-10 col-md-6">
+            <div
+              class="card border border-light-subtle rounded-3 shadow-sm bg-light"
+            >
+              <div class="card-body p-3 p-md-4 p-xl-5">
+                <h2 class="fs-6 fw-normal text-center text-secondary mb-4">
+                  Enter your details to register
+                </h2>
+                <form action="#!">
+                  <div class="row gy-2 overflow-hidden">
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="firstName"
+                          id="firstName"
+                          placeholder="First Name"
+                          required
+                        />
+                        <label for="firstName" class="form-label"
+                          >First Name</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="lastName"
+                          id="lastName"
+                          placeholder="Last Name"
+                          required
+                        />
+                        <label for="lastName" class="form-label"
+                          >Last Name</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="email"
+                          id="email"
+                          placeholder="name@example.com"
+                          required
+                        />
+                        <label for="email" class="form-label">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="password"
+                          class="form-control"
+                          name="password"
+                          id="password"
+                          value=""
+                          placeholder="Password"
+                          required
+                        />
+                        <label for="password" class="form-label"
+                          >Password</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          name="iAgree"
+                          id="iAgree"
+                          required
+                        />
+                        <label
+                          class="form-check-label text-secondary"
+                          for="iAgree"
+                        >
+                          I agree to the
+                          <a href="#!" class="link-success text-decoration-none"
+                            >terms and conditions</a
+                          >
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="d-grid my-3">
+                        <button class="btn btn-success btn-lg" type="submit">
+                          Sign up
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <p class="m-0 text-secondary text-center">
+                        Already have an account?
+                        <a href="#!" class="link-success text-decoration-none"
+                          >Sign in</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="assets/js/theme-main.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
