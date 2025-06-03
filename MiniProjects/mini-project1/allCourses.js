@@ -48,6 +48,8 @@ function addCard(course) {
     .content.cloneNode(true);
   template.querySelector("#image").src = course.image;
   template.querySelector(".card-title").innerText = course.name;
+  template.querySelector(".card-category").innerText = course.category;
+  template.querySelector(".card-title").innerText = course.name;
   template.querySelector(".card-duration").innerText = course.duration;
   template.querySelector(".card-tutor").innerText = course.tutor;
   template.querySelector(".card-description").innerText = course.skills;
