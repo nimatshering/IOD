@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <title>Calculator Example</title>
+    <style>
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h4>Result:</h4>
+      <span>Add:</span>
+      <div id="result"></div>
+      <span>Subtract:</span>
+      <div id="result1"></div>
+      <span>Multiply:</span>
+      <div id="result2"></div>
+      <span>Divide:</span>
+      <div id="result3"></div>
+    </div>
+  </body>
+  <script>
+    let num1 = 2;
+    let num2 = 4;
+    fetch(`/calculator/add?num1=${num1}&num2=${num2}`)
+      .then((response) => console.log(response.json()))
+      .then((data) => {
+        document.getElementById("result").innerHTML = data.result;
+      });
+
+    fetch(`/calculator/subtract?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("result1").innerHTML = data.result;
+      });
+
+    fetch(`/calculator/multiply?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("result2").innerHTML = data.result;
+      });
+
+    fetch(`/calculator/divide?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("result3").innerHTML = data.result;
+      });
+  </script>
+</html>
