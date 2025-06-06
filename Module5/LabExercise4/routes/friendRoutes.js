@@ -13,7 +13,7 @@ const friends = require("../models/friends");
 // TODO - #5: Move all logic out into a controller with functions for finding, filtering, info, adding and updating
 
 // default endpoint, gets all friends
-router.get("/", (req, res) => {
+router.get("/friends", (req, res) => {
   res.json(friends);
 });
 

@@ -33,7 +33,7 @@ router.get("/multiply", (req, res) => {
 router.get("/divide", (req, res) => {
   let number1 = parseInt(req.query.num1);
   let number2 = parseInt(req.query.num2);
-  let result = number1 / number2;
+  let result = parseFloat(number1 / number2.toFixed(2));
   console.log(result);
   res.status(200);
   res.json({ result: result });

@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "My FakeStore Project",
+    "title": "Calculator & FakeStore Project",
     "description": "My User Project Application API",
     "license": {
       "name": "MIT",
@@ -23,7 +23,7 @@
   "paths": {
     "/api/categories": {
       "get": {
-        "tags": ["Addition Service"],
+        "tags": ["FakeStore Service"],
         "summary": "Fetch Categories from using FakeStore API",
         "responses": {
           "200": {
@@ -32,14 +32,109 @@
         }
       }
     },
-
     "/api/products": {
       "get": {
-        "tags": ["Addition Service"],
+        "tags": ["FakeStore Service"],
         "summary": "Fetch Products from using FakeStore API",
         "responses": {
           "200": {
             "description": "This service allows you to Fetch Products from using FakeStore API"
+          }
+        }
+      }
+    },
+
+    "/calculator/add": {
+      "get": {
+        "tags": ["Calculator Service"],
+        "summary": "Add 2 numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "description": "The First Number"
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "description": "The Second number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to add two numbers together"
+          }
+        }
+      }
+    },
+
+    "/calculator/subtract": {
+      "get": {
+        "tags": ["Calculator Service"],
+        "summary": "Subtract 2 numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "description": "The First Number"
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "description": "The Second number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to subtract two numbers together"
+          }
+        }
+      }
+    },
+
+    "/calculator/multiply": {
+      "get": {
+        "tags": ["Calculator Service"],
+        "summary": "Multiply 2 numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "description": "The First Number"
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "description": "The Second number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to multiply two numbers together"
+          }
+        }
+      }
+    },
+
+    "/calculator/divide": {
+      "get": {
+        "tags": ["Calculator Service"],
+        "summary": "dDvide 2 numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "description": "The First Number"
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "description": "The Second number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you to divide two numbers together"
           }
         }
       }

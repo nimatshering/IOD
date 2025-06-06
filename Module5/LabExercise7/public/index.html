@@ -1,19 +1,75 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Page</title>
-    <style>
-      .center {
-        text-align: center;
-      }
-    </style>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <div class="center">
-      <h1>Hello Welcome!!!</h1>
-      <h2>Web server running</h2>
-    </div>
+  <body style="font-family: 'Ancizar Sans', sans-serif">
+    <header>
+      <h1>Calculator</h1>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <img src="./img/calc.png" alt="Illustration of a calculator" />
+        <p class="intro-text">
+          This calculator can perform basic arithmetic operations: addition,
+          subtraction, multiplication, and division.
+        </p>
+      </section>
+
+      <section class="cal-layout">
+        <!-- Number Input & Operators -->
+        <div class="column-1">
+          <div class="py-10">
+            <label for="num1">First Number</label>
+            <input
+              type="number"
+              name="num1"
+              id="num1"
+              placeholder="Enter first number"
+              required
+            />
+          </div>
+
+          <div class="py-10">
+            <label for="num2">Second Number</label>
+            <input
+              type="number"
+              name="num2"
+              id="num2"
+              placeholder="Enter second number"
+              required
+            />
+          </div>
+
+          <div class="btn-container">
+            <button class="btn-op" onclick="calculate('plus')">+</button>
+            <button class="btn-op" onclick="calculate('minus')">−</button>
+            <button class="btn-op" onclick="calculate('multiply')">×</button>
+            <button class="btn-op" onclick="calculate('divide')">÷</button>
+          </div>
+        </div>
+
+        <!-- Display & Reset -->
+        <div class="column-2">
+          <div class="output-box">
+            <p class="output" id="result">0</p>
+          </div>
+          <button class="btn-reset" onclick="reset()">Reset</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./calc.js"></script>
   </body>
 </html>

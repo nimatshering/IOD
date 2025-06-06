@@ -5,6 +5,9 @@ swaggerDocument = require("../swagger.json");
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // map all routes to the express app
+const calculatorRoutes = require("./calculatorRoutes");
+app.use("/calculator", calculatorRoutes);
+
 const fakeStoreRoutes = require("./fakeStoreRoutes");
 app.use("/", fakeStoreRoutes);
 

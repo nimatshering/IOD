@@ -22,42 +22,71 @@ function calculate(op) {
 
 // Function to add 2 numbers
 function add(num1, num2) {
-  fetch(`/calculator/add?num1=${num1}&num2=${num2}`)
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("result").innerHTML = data.result;
+  axios
+    .get(`/calculator/add`, {
+      params: {
+        num1: num1,
+        num2: num2,
+      },
+    })
+    .then((response) => {
+      document.getElementById("result").innerHTML = response.data.result;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
     });
 }
 
 // Function to substract 2 numbers
 function minus(num1, num2) {
-  fetch(`/calculator/subtract?num1=${num1}&num2=${num2}`)
-    .then((response) => response.json())
-    .then((data) => {
-      // console.log(data);
-      document.getElementById("result").innerHTML = data.result;
+  axios
+    .get(`/calculator/subtract`, {
+      params: {
+        num1: num1,
+        num2: num2,
+      },
+    })
+    .then((response) => {
+      document.getElementById("result").innerHTML = response.data.result;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
     });
 }
 
 // Function to multiply 2 numbers
 function multiply(num1, num2) {
-  fetch(`/calculator/multiply?num1=${num1}&num2=${num2}`)
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("result").innerHTML = data.result;
+  axios
+    .get(`/calculator/multiply`, {
+      params: {
+        num1: num1,
+        num2: num2,
+      },
+    })
+    .then((response) => {
+      document.getElementById("result").innerHTML = response.data.result;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
     });
 }
 
 // Function to divide 2 numbers
 function divide(num1, num2) {
-  fetch(`/calculator/divide?num1=${num1}&num2=${num2}`)
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("result").innerHTML = data.result;
+  axios
+    .get(`/calculator/divide`, {
+      params: {
+        num1: num1,
+        num2: num2,
+      },
+    })
+    .then((response) => {
+      document.getElementById("result").innerHTML = response.data.result;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
     });
-  // Math.round(result * 100) / 100;
 }
-
 // Function reset all the fileds
 function reset() {
   document.getElementById("num1").value = 0;
