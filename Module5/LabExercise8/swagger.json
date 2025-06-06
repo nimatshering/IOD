@@ -32,6 +32,7 @@
         }
       }
     },
+
     "/api/products": {
       "get": {
         "tags": ["FakeStore Service"],
@@ -86,7 +87,7 @@
         ],
         "responses": {
           "200": {
-            "description": "This service allows you to subtract two numbers together"
+            "description": "This service allows you to subtract two numbers"
           }
         }
       }
@@ -110,7 +111,7 @@
         ],
         "responses": {
           "200": {
-            "description": "This service allows you to multiply two numbers together"
+            "description": "This service allows you to multiply two numbers"
           }
         }
       }
@@ -119,7 +120,7 @@
     "/calculator/divide": {
       "get": {
         "tags": ["Calculator Service"],
-        "summary": "dDvide 2 numbers",
+        "summary": "Divide 2 numbers",
         "parameters": [
           {
             "name": "num1",
@@ -134,7 +135,7 @@
         ],
         "responses": {
           "200": {
-            "description": "This service allows you to divide two numbers together"
+            "description": "This service allows you to divide two numbers"
           }
         }
       }
