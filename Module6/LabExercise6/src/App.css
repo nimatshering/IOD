@@ -1,0 +1,90 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  margin: 0 10px;
+}
+input {
+  padding: 10px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 220px;
+  margin: 40px auto;
+}
+
+.card {
+  background: #f3f6f3;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #cbcdcb;
+}
+
+.btn-gray {
+  background: #9c9d9c;
+  color: white;
+  font-size: 30px;
+}
+
+.btn-gray:hover {
+  background: #cbcdcb;
+}
+
+.btn-blue {
+  background: #2323c2;
+  color: white;
+  font-size: 30px;
+}
+
+.btn-blue:hover {
+  background: #3838d5;
+}
+
+.btn-green {
+  background: #0a6b20;
+  color: white;
+  font-size: 30px;
+}
+
+.btn-green:hover {
+  background: #17a037;
+}
+
+/* Spacing */
+.p-10 {
+  padding: 10px;
+}
+
+.p-5 {
+  padding: 5px;
+}
+.py-10 {
+  padding: 10px 0;
+}
+
+.py-5 {
+  padding: 5px 0;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-5 {
+  margin: 5px;
+}
+
+.my-10 {
+  margin: 10px 0;
+}
+
+.my-5 {
+  margin: 5px 0;
+}
