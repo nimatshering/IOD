@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.componentBox {
+  background: #f6efef;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+select {
+  padding: 5px 10px;
+}
+
+.my-20 {
+  margin: 20px 0;
+}
+
+.display {
+  font-weight: bold;
+}

@@ -1,0 +1,52 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.componentBox {
+  background: #f6efef;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+select {
+  padding: 5px;
+  margin: 0px 10px;
+}
+
+.my-20 {
+  margin: 20px 0;
+}
+
+.display {
+  font-weight: bold;
+}
+
+.btn-blue {
+  background: #063078;
+  color: #f6efef;
+}
+
+.btn-blue:hover {
+  background: #0f58d6;
+}
+
+/* navbar*/
+.NavBar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+.NavBar ul li a {
+  padding: 1em;
+  color: inherit;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+}
+.NavBar ul li a.active {
+  font-weight: bold;
+}
