@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "name": "Walter White",
+    "course": "Artifical Intelligence",
+    "description": "Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut",
+    "image": "images/trainers/trainer-1.jpg"
+  },
+
+  {
+    "id": 2,
+    "name": "Sarah Jhinson",
+    "course": "Generative AI",
+    "description": "Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut",
+    "image": "images/trainers/trainer-2.jpg"
+  },
+
+  {
+    "id": 3,
+    "name": "William Anderson",
+    "course": "Machine Learning",
+    "description": "Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut",
+    "image": "images/trainers/trainer-3.jpg"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "about": [
+    {
+      "title": "Why Learn with Us?",
+      "body": "Our e-learning platform offers a wide range of high-quality courses designed by experts to help you grow your skills andknowledge anytime, anywhere. Whether you're a student,professional, or lifelong learner, you'll find interactive lessons, video tutorials, quizzes, and progress tracking to support your goals. Learn at your own pace, from any device,with 24/7 access to resources. Join a community of learners and take the next step in your personal or professional journey with - ",
+      "options": {
+        "option1": "Flexible Learning Anytime, Anywhere",
+        "option2": "Interactive and Engaging Content",
+        "option3": "Personalized Learning Experience"
+      },
+      "image": "/images/courses/elearning.jpg"
+    }
+  ]
+}
