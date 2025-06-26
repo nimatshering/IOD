@@ -1,0 +1,32 @@
+const userResult = db.Users.insertOne({
+  firstName: "John",
+  lastName: "Doe",
+  email: "johndoe@example.com",
+  createdAt: new Date(),
+  updatedAt: null,
+});
+
+const postResult = db.Posts.insertOne({
+  usser_id: 1,
+  title: "My First Blog Post",
+  description: "This is my first blog post.",
+  image: "/images/blog/1.jpg",
+  createdAt: new Date(),
+  updatedAt: null,
+});
+
+const commentResult = db.Comments.insertOne({
+  post_id: 1,
+  user_id: 1,
+  content: "My first comment.",
+  createdAt: new Date(),
+  updatedAt: null,
+});
+
+db.Likes.insertOne({
+  post_id: 1,
+  user_id: 1,
+  isLiked: true,
+  createdAt: new Date(),
+  updatedAt: null,
+});

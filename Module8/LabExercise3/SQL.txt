@@ -1,0 +1,49 @@
+CREATE database Blog;
+
+// -- Users table
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  firstName VARCHAR(50) NOT NULL,
+  lastName VARCHAR(50) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME DEFAULT NULL
+);
+
+
+// -- Posts table
+CREATE TABLE posts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  image VARCHAR(255),
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME DEFAULT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+// -- Comments table
+CREATE TABLE comments (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  post_id INT NOT NULL,
+  user_id INT NOT NULL,
+  content TEXT NOT NULL,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME DEFAULT NULL,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+// -- Likes table
+CREATE TABLE likes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  post_id INT NOT NULL,
+  user_id INT NOT NULL,
+  isLiked BOOLEAN NOT NULL,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME DEFAULT NULL,
+  FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  UNIQUE (user_id, post_id)  //- to prevent multiple likes from same user on the same post
+);
