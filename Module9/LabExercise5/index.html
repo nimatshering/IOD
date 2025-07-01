@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Socket.IO Chat</title>
+    <style>
+      body {
+        margin: 0;
+        padding-bottom: 3rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+      }
+
+      #form {
+        background: rgba(0, 0, 0, 0.15);
+        padding: 0.25rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        height: 3rem;
+        box-sizing: border-box;
+        backdrop-filter: blur(10px);
+      }
+
+      #input {
+        border: none;
+        padding: 0 1rem;
+        flex-grow: 1;
+        border-radius: 2rem;
+        margin: 0.25rem;
+      }
+
+      #input:focus {
+        outline: none;
+      }
+
+      #form > button {
+        background: #072ebd;
+        border: none;
+        padding: 0 1rem;
+        margin: 0.25rem;
+        border-radius: 3px;
+        outline: none;
+        color: #fff;
+      }
+
+      #messages {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #messages > li {
+        padding: 0.5rem 1rem;
+      }
+
+      #messages > li:nth-child(odd) {
+        background: #efefef;
+      }
+
+      #messages > li.self {
+        background: #edf0ef;
+        text-align: right;
+      }
+
+      #messages > li.system {
+        font-style: italic;
+        color: #666;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="online-users">
+      <strong>Online users:</strong>
+      <ul id="users-list"></ul>
+    </div>
+
+    <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off" /><button>Send</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+
+      const usersList = document.getElementById("users-list");
+      const form = document.getElementById("form");
+      const input = document.getElementById("input");
+      const messages = document.getElementById("messages");
+      const isTyping = "typing-notice";
+
+      let username = "";
+      let typing = false;
+      let typingTimeout;
+
+      // Enter nickname
+      username = prompt("Enter your nickname:");
+      socket.emit("set username", username);
+
+      // Update user list
+      socket.on("user list", (users) => {
+        usersList.innerHTML = "";
+        users.forEach((name) => {
+          const li = document.createElement("li");
+          li.textContent = name;
+          usersList.appendChild(li);
+        });
+      });
+
+      // send chat message
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (input.value) {
+          const message = input.value;
+          const item = document.createElement("li");
+          item.textContent = `${username}: ${message}`;
+          item.classList.add("self");
+          messages.appendChild(item);
+          window.scrollTo(0, document.body.scrollHeight);
+          socket.emit("chat message", message);
+          input.value = "";
+        }
+      });
+
+      // Receive chat messages
+      socket.on("chat message", (msg) => {
+        const item = document.createElement("li");
+        item.textContent = msg;
+        messages.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+
+      // Typing event
+      input.addEventListener("input", () => {
+        if (!typing) {
+          typing = true;
+          socket.emit("typing", true);
+        }
+        clearTimeout(typingTimeout);
+        typingTimeout = setTimeout(() => {
+          typing = false;
+          socket.emit("typing", false);
+        }, 1000);
+      });
+
+      // Display typing indicator
+      socket.on("typing", (name) => {
+        let typing = document.getElementById(isTyping);
+        if (!typing) {
+          typing = document.createElement("li");
+          typing.id = isTyping;
+          typing.classList.add("system");
+          messages.appendChild(typing);
+        }
+        typing.textContent = `${name} is typing...`;
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+
+      // Remove typing indicator
+      socket.on("stop typing", () => {
+        const typing = document.getElementById(isTyping);
+        if (typing) {
+          typing.remove();
+        }
+      });
+    </script>
+  </body>
+</html>
