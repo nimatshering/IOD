@@ -1,0 +1,226 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Mini Project 3",
+    "description": "Mini Project 3 Application API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Mini Project 3",
+      "description": "API for MiniProject 3 in the system"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/api/accounts/sync": {
+      "get": {
+        "tags": [
+          "Endpoint to fetch and sync records from External API insert in local MongoDB database"
+        ],
+        "summary": "Fetch and Sync records from using external API and local MongoDB",
+        "responses": {
+          "200": {
+            "description": "This service allows you to Sync records using FakeBank API and local DB"
+          }
+        }
+      }
+    },
+
+    "/api/accounts/show": {
+      "get": {
+        "tags": ["Endpoint to Display Records"],
+        "summary": "Fetch Records from DB",
+        "responses": {
+          "200": {
+            "description": "This service allows you to Fetch Records from DB"
+          }
+        }
+      }
+    },
+
+    "/api/accounts/show/{id}": {
+      "get": {
+        "tags": ["Endpoint to Display Records"],
+        "summary": "Fetch a single record by _id",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "pattern": "^[a-f\\d]{24}$",
+            "description": "MongoDB ObjectId of the record to fetch"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Record retrieved successfully"
+          }
+        }
+      }
+    },
+
+    "/api/accounts/create": {
+      "post": {
+        "tags": ["Endpoint to Create record "],
+        "summary": "create new record in the local Database",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "category": {
+                  "type": "string",
+                  "example": "Other Services"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "All Purpose Spray"
+                },
+                "debit": {
+                  "type": "number",
+                  "format": "float",
+                  "example": 100.84
+                },
+                "credit": {
+                  "type": "number",
+                  "format": "float",
+                  "nullable": true,
+                  "example": null
+                },
+                "transactionDate": {
+                  "type": "string",
+                  "format": "date-time",
+                  "example": "2015-12-31"
+                }
+              },
+              "required": [
+                "category",
+                "description",
+                "debit",
+                "transactionDate"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Transaction created successfully"
+          },
+          "400": {
+            "description": "Invalid input data"
+          }
+        }
+      }
+    },
+
+    "/api/accounts/update/{id}": {
+      "put": {
+        "tags": ["Endpoint to Update Record"],
+        "summary": "Update record using _id in local DB",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "MongoDB ObjectId of the transaction to update",
+            "pattern": "^[a-f\\d]{24}$"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "category": {
+                  "type": "string",
+                  "example": "Other Services"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Updated Description"
+                },
+                "debit": {
+                  "type": "number",
+                  "format": "float",
+                  "example": 150.0
+                },
+                "credit": {
+                  "type": "number",
+                  "format": "float",
+                  "nullable": true,
+                  "example": null
+                },
+                "transactionDate": {
+                  "type": "string",
+                  "format": "date-time",
+                  "example": "2016-01-01T00:00:00.000Z"
+                }
+              },
+              "required": [
+                "category",
+                "description",
+                "debit",
+                "transactionDate"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Transaction updated successfully"
+          },
+          "400": {
+            "description": "Invalid input or malformed ObjectId"
+          },
+          "404": {
+            "description": "Transaction not found"
+          }
+        }
+      }
+    },
+
+    "/api/accounts/delete/{id}": {
+      "delete": {
+        "tags": ["Endpoint to Delete Record"],
+        "summary": "Delete a record by _id in localDB",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "MongoDB ObjectId of the transaction to delete",
+            "pattern": "^[a-f\\d]{24}$"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Transaction deleted successfully"
+          },
+          "400": {
+            "description": "Invalid ObjectId format"
+          },
+          "404": {
+            "description": "Transaction not found"
+          }
+        }
+      }
+    }
+  }
+}
